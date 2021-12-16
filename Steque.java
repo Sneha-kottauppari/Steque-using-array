@@ -147,5 +147,26 @@ public class Steque<Item> implements Iterable<Item> {
         return item;
     }
 }
+public static void main(String[] args)
+{
+    Steque<Integer> s = new Steque<Integer>();
+    s.enqueue(14);
+    s.enqueue(17);
+    s.enqueue(20);
+    s.push(5);
+    s.push(10);
+    s.push(15);
+    s.enqueue(25);
+    Iterator<Integer> i = s.iterator();
+    System.out.println("steque elements");
+    while(i.hasNext())
+        System.out.println(i.next());
+        System.out.println("popped elements");
+    while(!s.isEmpty())
+    {
+        System.out.println(s.pop());
+    }
+}
+
 }
 © 2021 GitHub, Inc.
