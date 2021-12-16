@@ -123,8 +123,29 @@ public class Steque<Item> implements Iterable<Item> {
      * stored in steque.
      * 
      */
-    public Iterator<Item> iterator() {
-
+    //Time complexity:O(1) Space Complexity:0
+    public Iterator<Item> iterator()
+    {
+        return new ArrayIterator();
     }
+    public class ArrayIterator implements Iterator<Item>
+    {
+        public int i = n-1;
+        public boolean hasNext(){
+            return i >= 0;
+    }
+    public void remove()
+    {
+        throw new UnsupportedOperationException();
+    }
+    public Item next()
+    {
+        if(!hasNext())
+            throw new NoSuchElementException();
+        Item item = a[i];
+        i--;
+        return item;
+    }
+}
 }
 © 2021 GitHub, Inc.
