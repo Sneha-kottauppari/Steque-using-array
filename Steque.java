@@ -104,6 +104,7 @@ public class Steque<Item> implements Iterable<Item> {
      * checks to see if steque is empty.
      * @return true if steque is empty, false otherwise.
      */
+    //Time complexity:O(1) Space Complexity:0
     public boolean isEmpty() {
         return n==0;
     }
@@ -112,8 +113,9 @@ public class Steque<Item> implements Iterable<Item> {
      * return the number of elements currently in the steque.
      * @return size as integer.
      */
+    //Time complexity:O(1) Space Complexity:0
     public int size() {
-
+        return n;
     }
     
     /**
